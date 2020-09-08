@@ -26,6 +26,7 @@ class App extends React.Component {
   }
 
   onFindPetsClick = () => {
+    // let BASE_URL = this.state.filters.type === "all" ? "/api/pets" : `/api/pets?type=${this.state.filters.type}` 
     let BASE_URL = '/api/pets'
     if(this.state.filters.type != "all"){
       BASE_URL = `${BASE_URL}?type=${this.state.filters.type}`

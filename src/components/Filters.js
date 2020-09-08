@@ -2,9 +2,6 @@ import React from 'react'
 
 class Filters extends React.Component {
 
-  //fetch()
-  // this.props.onChangeType
-
   render() {
     const {onChangeType, onFindPetsClick} = this.props
     return (
