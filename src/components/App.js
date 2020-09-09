@@ -2,7 +2,6 @@ import React from 'react'
 
 import Filters from './Filters'
 import PetBrowser from './PetBrowser'
-import { debug } from 'webpack'
 
 class App extends React.Component {
   constructor() {
@@ -28,7 +27,7 @@ class App extends React.Component {
   onFindPetsClick = () => {
     // let BASE_URL = this.state.filters.type === "all" ? "/api/pets" : `/api/pets?type=${this.state.filters.type}` 
     let BASE_URL = '/api/pets'
-    if(this.state.filters.type != "all"){
+    if(this.state.filters.type !== "all"){
       BASE_URL = `${BASE_URL}?type=${this.state.filters.type}`
     } 
     fetch(BASE_URL)

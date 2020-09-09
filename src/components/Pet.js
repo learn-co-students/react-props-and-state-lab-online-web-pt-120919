@@ -8,17 +8,17 @@ class Pet extends React.Component {
       "male": '♂'
     }
 
-    let buttons;
-    if(pet.isAdopted === "true"){
-      buttons = <button className="ui disabled button">Already adopted</button>
-    } else {
-      buttons = <button className="ui primary button" onClick={()=> onAdoptPet(pet.id)}>Adopt pet</button>
-    }
+    // let buttons;
+    // if(pet.isAdopted){
+    //   buttons = <button className="ui disabled button">Already adopted</button>
+    // } else {
+    //   buttons = <button className="ui primary button" onClick={()=> onAdoptPet(pet.id)}>Adopt pet</button>
+    // }
 
     return (
       <div className="card">
         <div className="content">
-          <a className="header">
+          <a href="#" className="header">
             {symbol[pet.gender]} 
             {pet.name}
           </a> 
@@ -31,7 +31,8 @@ class Pet extends React.Component {
           </div>
         </div>
         <div className="extra content">
-          {buttons}
+          {/* {buttons} */}
+          {pet.isAdopted ? <button className="ui disabled button">Already adopted</button> : <button className="ui primary button" onClick={()=> onAdoptPet(pet.id)}>Adopt pet</button>}
         </div>
       </div>
     )

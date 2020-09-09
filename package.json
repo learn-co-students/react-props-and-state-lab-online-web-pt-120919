@@ -20,6 +20,7 @@
     "babel-preset-react": "^6.22.0",
     "babel-preset-stage-1": "^6.24.1",
     "chai": "^3.5.0",
+    "chokidar": "^3.4.2",
     "enzyme": "^3.1.0",
     "enzyme-adapter-react-16": "^1.15.4",
     "expect": "^21.2.1",
