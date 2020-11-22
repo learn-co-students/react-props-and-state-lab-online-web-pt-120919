@@ -5,8 +5,12 @@ class Pet extends React.Component {
   // replace all the things with what the props of the pet
   // {this.props.pet.name} this is an expression anything with a value needs to be wrapped in curly brackets 
   // const {pet} = this.props if you want to deeconstruct it
+  
   render() {
     let callback = () => this.props.onAdoptPet(this.props.pet.id)
+    // needs to get called with a pet.id
+    // neeed to make sure it is a callback function because otherwise it will instalnly invotke it ()=>
+    // if you wrote this directly in the onclick: ()=> this.props.onAdoptPet(this.props.pet.id)
     let symbol = '♂';
     if(this.props.pet.gender === 'female'){
       symbol = '♀';
